@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>错误页面</title>
+</head>
+<body>
+    <h1 style="color: red;">发生错误啦<a th:href="@{~/}">返回首页</a></h1>
+    <!--/*@thymesVar id="url" type="java.lang.String"*/-->
+    <h5>请求地址：<span th:text="${url}"></span></h5>
+    <!--/*@thymesVar id="msg" type="java.lang.Exception"*/-->
+    <h5>错误信息：<span th:text="${msg.toString()}"></span></h5>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+</head>
+<body>
+    <h1>用户登录</h1>
+    <h5 style="color:red;" th:text="${msg}"></h5>
+    <form th:action="@{~/login}" method="post">
+        <input type="text" name="userId" th:placeholder="#{login.username}"/><br/>
+        <input type="password" name="password" th:placeholder="#{login.password}"/><br/>
+        <input type="submit" th:value="#{login.submit}"/><br/>
+        <span>语言切换:<a th:href="@{~/login(lan='zh_CN')}">中文</a><a th:href="@{~/login(lan='en_US')}">English</a></span>
+    </form>
+</body>
+</html>
